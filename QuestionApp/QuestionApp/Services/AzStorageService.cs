@@ -57,7 +57,7 @@ namespace CoreImageGallery.Services
 
         public async Task<IEnumerable<UserQuestion>> GetQuestionsAsync()
         {
-            await InitializeContainerAsync();
+            //await InitializeContainerAsync();
 
             var questionList = new List<UserQuestion>();
             var token = new BlobContinuationToken();

@@ -1,12 +1,16 @@
 ﻿@page
-@model QuestionsModel
-    @{
-        ViewData["Title"] = "About";
-    }
+    @model QuestionsModel
+        @{
+            ViewData["Title"] = "About";
+        }
 
-    @foreach (var question in Model.Questions)
-    {
-        <p style="font-size:1.5em;">
-            @question
-        </p>
-    }
+        @foreach (var question in Model.Questions)
+        {
+            <p style="font-size:1.5em;">
+                <div>@question.Question</div>
+                @if(question.Email != null){
+                    <div>@question.Name</div>
+                    <div>@question.Email</div>
+                }
+            </p>
+        }

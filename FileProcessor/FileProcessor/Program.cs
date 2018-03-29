@@ -12,9 +12,10 @@ namespace ConsoleApp1
     {
         private Dictionary<string, int> Counts = new Dictionary<string, int>();
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            string[] inputFiles = new string[] {  };
+            await Task.Delay(0);
+            string[] inputFiles = new string[] { /*Expects tab separated files to read */ };
             Program calc = new Program();
 
             if (Debugger.IsAttached)
@@ -48,11 +49,12 @@ namespace ConsoleApp1
                 string line = fs.ReadLine();
                 while (!fs.EndOfStream)
                 {
-                    //Expected format is Value1Type, Value2Type, ID, TimeStamp
-                    string[] values = line.Split('\t');
-                    string authType = values[0];
+                    //Expected format is AuthType, ProjectType, ID, TimeStamp
+                    //string[] values = line.Split('\t');
+                    //var authType = values[0];
+                    var authType = line.Substring(0, line.IndexOf('\t'));
 
-                    if (this.Counts.ContainsKey(authType))
+                    if (Counts.ContainsKey(authType))
                     {
                         this.Counts[authType]++;
                     }

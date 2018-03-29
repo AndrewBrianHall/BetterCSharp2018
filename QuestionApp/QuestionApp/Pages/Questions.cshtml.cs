@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using QuestionApp.Models;
 using QuestionApp.Services;
 
 namespace QuestionApp.Pages
 {
     public class QuestionsModel : PageModel
     {
-        public List<string> Questions { get; set; }
+        public IEnumerable<UserQuestion> Questions { get; set; }
 
         private IStorageService _storageService;
 
@@ -20,12 +21,12 @@ namespace QuestionApp.Pages
 
         public async Task OnGetAsync()
         {
-            var questions = await _storageService.GetQuestionsAsync();
-            this.Questions = new List<string>();
-            foreach (var question in questions)
-            {
-                Questions.Add(question.Question);
-            }
+            this.Questions = await _storageService.GetQuestionsAsync();
+            //this.Questions = new List<UserQuestion>();
+            //foreach (var question in questions)
+            //{
+            //    Questions.Add(question.Question);
+            //}
         }
     }
 }
