@@ -1,0 +1,23 @@
+﻿@page
+    @model IndexModel
+        @{
+            ViewData["Title"] = "Submit Question";
+        }
+
+        <form method="POST" style="font-size:1.5em;">
+            <div ><b>Question</b></div>
+            <div>
+                <textarea asp-for="Question.Question" rows="5" style="width:332px" required
+                          data-val-required="The Description field is required."
+                          data-val-maxlength-max="5000"
+                          data-val-maxlength="The field Description must be a string or array type with a maximum length of '5000'."
+                          data-val="true"></textarea>
+            </div>
+            <br />
+            <div><b>[Optional] Name</b></div>
+            <div><input asp-for="Question.Name" style="width:332px" /></div>
+            <div><b>[Optional] Email</b></div>
+            <div><input asp-for="Question.Email" type="email" style="width:332px"/></div>
+            <br />
+            <input type="submit" value="Submit" />
+        </form>

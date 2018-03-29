@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27526.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionApp", "QuestionApp\QuestionApp.csproj", "{7158A546-B3EE-45BC-B467-C4DDF55830EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageService", "StorageService\StorageService.csproj", "{FDB58943-DA46-48DC-B468-50E0427564E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7158A546-B3EE-45BC-B467-C4DDF55830EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7158A546-B3EE-45BC-B467-C4DDF55830EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7158A546-B3EE-45BC-B467-C4DDF55830EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7158A546-B3EE-45BC-B467-C4DDF55830EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB58943-DA46-48DC-B468-50E0427564E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB58943-DA46-48DC-B468-50E0427564E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB58943-DA46-48DC-B468-50E0427564E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB58943-DA46-48DC-B468-50E0427564E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD07A314-06AB-4127-925B-5E2B81740129}
+	EndGlobalSection
+EndGlobal

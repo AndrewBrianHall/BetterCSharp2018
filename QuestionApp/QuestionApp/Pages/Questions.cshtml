@@ -1,0 +1,12 @@
+﻿@page
+@model QuestionsModel
+    @{
+        ViewData["Title"] = "About";
+    }
+
+    @foreach (var question in Model.Questions)
+    {
+        <p style="font-size:1.5em;">
+            @question
+        </p>
+    }
